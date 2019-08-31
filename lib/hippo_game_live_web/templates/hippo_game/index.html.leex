@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="time"><b><font color=red><%= @text_to_type %></font></b></div>
+  <div class="time">time left: <%= @time_left %></div>
+  <div class="time">Press "+" to play again</b></div>
+</div>
+
+<div class="track">
+  <%= for {x, type} <- @track do %>
+  <div class="field <%= type %>" style="left: <%= x * 50 %>px; top: 50px;">
+  </div>
+  <% end %>
+  <%= for {x, type} <- @track do %>
+  <div class="field <%= type %>" style="left: <%= x * 50 %>px; top: 100px;">
+  </div>
+  <% end %>
+  <div class="final-score" style="display: none">
+  </div>
+</div>
+
+<div phx-keydown="player" phx-target="window"></div>
+<div class="field playerright" style="left: <%= @player_x * 50 %>px; top: 50px;"> </div>
+<div class="field playerright" style="left: <%= @player_y * 50 %>px; top: 100px;"> </div>
+
