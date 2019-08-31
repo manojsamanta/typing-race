@@ -14,3 +14,9 @@ To start your Phoenix server:
 Now you can visit [`localhost:80`](http://localhost:80) from your browser.
 
 If you need port 4000, make sure you change the config file (config/dev.exs).
+
+### Note:
+
+Please note that the code in the live folder is not refactored on purpose. You will see that almost the same function repeats for two players - 'x' and 'y'. The multi-player version will not need that redundancy, because the process will automatically figure out which player to move.
+
+
